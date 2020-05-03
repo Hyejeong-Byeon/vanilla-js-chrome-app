@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -13,14 +15,29 @@ html {
 
 body {
     background-color: rgb(29, 40, 53);
+    font-family: 'Cabin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Cabin', 'Helvetica Neue', sans-serif;
 }
 
 #wrap {
     color: #fff;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.212);
+}
+
+.left-box {
+    display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 100px;
+    width: 50%;
+}
+
+.right-box {
+    width: 50%;
+    display: flex;
+    justify-content: center;
 }
 
 .js-weather {
@@ -29,12 +46,13 @@ body {
     align-items: center;
 }
 
-.js-weather > h3:first-child{
+.js-weather>h3:first-child {
     margin-bottom: 5px;
 }
 
 .js-clock {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    width: 400px;
 }
 
 .js-clock h1 {
@@ -48,30 +66,50 @@ body {
 }
 
 .form>input,
-.js-toDoForm > input {
-    width: 200px;
-    height: 30px;
+.js-toDoForm>input {
+    width: 250px;
+    height: 40px;
     font-size: 20px;
-    padding: 0 5px;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: none;
 }
 
 .greetings {
     font-size: 30px;
 }
 
-.js-toDoList{
-    min-width: 200px;
+.js-toDoList {
     margin-top: 50px;
     color: #fff;
     font-size: 20px;
+    font-weight: 600;
 }
 
-button{
-    margin-left: 10px;
-    background-color: #fff;
+.js-toDoList li {
+    margin: 10px 0;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.425);
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    background: none;
     border: none;
-    border-radius: 15px;
-    padding: 3px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+button>i {
+    color: #fff;
+    opacity: 0.5;
+    font-size: 18px;
+}
+
+button>i:hover {
+    opacity: 1;
 }
 
 .showing {
