@@ -5,7 +5,7 @@ const IMG_NUMBER = 5;
 
 function paintImage(imgNumber) {
     const image = new Image();
-    image.src = `../images/bg-${imgNumber + 1}.jpg`;
+    image.src = `./image/bg${imgNumber + 1}.jpg`;
     image.classList.add("bgImage");
     body.prepend(image);
 }
